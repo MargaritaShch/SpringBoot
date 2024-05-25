@@ -33,7 +33,7 @@
 ```sh
 mvn clean install
 ```
-### Запуск:
+### Запуск проекта:
 
 ```sh
 mvn spring-boot:run
