@@ -2,6 +2,7 @@ package com.example.myproject.components;
 
 import org.springframework.stereotype.Component;
 
+@Component
 public class Suspension {
     private Hinge hinge;
 

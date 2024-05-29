@@ -18,17 +18,17 @@ public class CarApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        //XML
+           // XML
         ApplicationContext contextXml = new ClassPathXmlApplicationContext("applicationContext.xml");
         Car carXml = (Car) contextXml.getBean("car");
         System.out.println("Car from XML: " + carXml);
 
-        //XML + Java Annotation
-        ApplicationContext contextAnnotation = new AnnotationConfigApplicationContext(CarApplication.class);
+        // XML + Java Annotation
+        ApplicationContext contextAnnotation = new ClassPathXmlApplicationContext("applicationContext-annotation.xml");
         Car carAnnotation = contextAnnotation.getBean(Car.class);
         System.out.println("Car from Annotation: " + carAnnotation);
 
-        //Java Code
+        // Java Code
         ApplicationContext contextJavaCode = new AnnotationConfigApplicationContext(AppConfig.class);
         Car carJavaCode = contextJavaCode.getBean(Car.class);
         System.out.println("Car from Java Code: " + carJavaCode);
